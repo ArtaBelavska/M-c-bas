@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Izvēlieties vide (Ārtelpu vai Ieķštelpu):");
+        String vide = sc.nextLine().toLowerCase(); 
+
+        System.out.println("Izvēlieties grupu (Individuālais, pārī vai grupu):");
+        String grupa = sc.nextLine().toLowerCase(); 
+
+        System.out.println("Izvēlieties intensitāti (zema vai augsta):");
+        String intensitate = sc.nextLine().toLowerCase();
+
+        if (vide.equals("ārtelpu")) {
+            if (grupa.equals("individuālais")) {
+                if (intensitate.equals("zema")) {
+                    System.out.println("Ieteikums: riteņbraukšana");
+                } else if (intensitate.equals("augsta")) {
+                    System.out.println("Ieteikums: skriešana");
+                }
+            } else if (grupa.equals("pārī")) {
+                if (intensitate.equals("zema")) {
+                    System.out.println("Ieteikums: galda teniss");
+                } else if (intensitate.equals("augsta")) {
+                    System.out.println("Ieteikums: teniss");
+                }
+            } else if (grupa.equals("grupu")) {
+                if (intensitate.equals("zema")) {
+                    System.out.println("Ieteikums: golfs");
+                } else if (intensitate.equals("augsta")) {
+                    System.out.println("Ieteikums: futbols");
+                }
+            }
+        } else if (vide.equals("ieķštelpu")) {
+            if (grupa.equals("individuālais")) {
+                if (intensitate.equals("zema")) {
+                    System.out.println("Ieteikums: joga");
+                } else if (intensitate.equals("augsta")) {
+                    System.out.println("Ieteikums: bokss");
+                }
+            } else if (grupa.equals("pārī")) {
+                if (intensitate.equals("zema")) {
+                    System.out.println("Ieteikums: badmintons");
+                } else if (intensitate.equals("augsta")) {
+                    System.out.println("Ieteikums: dejošana");
+                }
+            } else if (grupa.equals("grupu")) {
+                if (intensitate.equals("zema")) {
+                    System.out.println("Ieteikums: aerobika");
+                } else if (intensitate.equals("augsta")) {
+                    System.out.println("Ieteikums: basketbols");
+                }
+            }
+        } else {
+            System.out.println("Nederīga ievade, lūdzu, izvēlieties pareizu vidi (Ārtelpu vai Ieķštelpu).");
+        }
+
+        sc.close();
+    }
+}
